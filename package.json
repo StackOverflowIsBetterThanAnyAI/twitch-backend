@@ -1,0 +1,24 @@
+{
+    "name": "twitch-backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "start": "nodemon server.js"
+    },
+    "keywords": [],
+    "author": "StackOverflowIsBetterThanAnyAI",
+    "license": "ISC",
+    "prettier": "prettier-es5",
+    "dependencies": {
+        "axios": "^1.7.2",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "node-fetch": "^3.3.2",
+        "prettier-es5": "^0.0.3"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.4"
+    }
+}
