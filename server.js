@@ -16,7 +16,7 @@ app.use(
     cors({
         origin: [
             'http://localhost:3000',
-            'https://stackoverflowisbetterthananyai.github.io/twitch-app/',
+            'https://stackoverflowisbetterthananyai.github.io',
         ],
         methods: ['GET', 'POST'],
         credentials: true,
