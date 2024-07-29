@@ -14,7 +14,10 @@ const PORT = process.env.PORT || '5000'
 
 app.use(
     cors({
-        origin: ['http://localhost:3000'],
+        origin: [
+            'http://localhost:3000',
+            'https://stackoverflowisbetterthananyai.github.io/twitch-app/',
+        ],
         methods: ['GET', 'POST'],
         credentials: true,
     })
