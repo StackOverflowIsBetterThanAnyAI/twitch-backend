@@ -17,6 +17,7 @@ app.use(
         origin: [
             'http://localhost:3000',
             'https://stackoverflowisbetterthananyai.github.io',
+            'https://muenzenhofer.com',
         ],
         methods: ['GET', 'POST'],
         credentials: true,
