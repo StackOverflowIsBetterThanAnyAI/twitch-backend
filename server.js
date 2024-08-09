@@ -11,16 +11,12 @@ config()
 
 const app = express()
 const PORT = process.env.PORT || '5000'
+const DOMAIN = process.env.DOMAIN
 const IP = process.env.IP
 
 app.use(
     cors({
-        origin: [
-            'http://localhost:3000',
-            'https://stackoverflowisbetterthananyai.github.io',
-            'https://muenzenhofer.com',
-            IP,
-        ],
+        origin: ['http://localhost:3000', DOMAIN, IP],
         methods: ['GET', 'POST'],
         credentials: true,
     })
