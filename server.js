@@ -16,7 +16,7 @@ const IP = process.env.IP
 
 app.use(
     cors({
-        origin: ['http://localhost:3000', DOMAIN, IP],
+        origin: ['http://localhost:3000', 'https://stackoverflowisbetterthananyai.github.io', IP],
         methods: ['GET', 'POST'],
         credentials: true,
     })
