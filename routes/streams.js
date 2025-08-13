@@ -17,7 +17,9 @@ router.post('/streams', async (req, res) => {
 
     try {
         const response = await fetch(url, { headers, method: 'GET' })
-        if (!response.ok) throw new Error(`${response.status} ${response.url}`)
+        if (!response.ok) {
+            throw new Error(`${response.status} ${response.url}`)
+        }
         const data = await response.json()
         res.json(data)
     } catch (error) {

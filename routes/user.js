@@ -23,7 +23,9 @@ router.post('/user', async (req, res) => {
 
     try {
         const response = await fetch(url, { headers, method: 'GET' })
-        if (!response.ok) throw new Error(`${response.status} ${response.url}`)
+        if (!response.ok) {
+            throw new Error(`${response.status} ${response.url}`)
+        }
         const data = await response.json()
         if (!data.data.length) {
             return res.status(404).json({ error: 'No user found' })

@@ -18,7 +18,9 @@ router.post('/profile-picture', async (req, res) => {
 
     try {
         const response = await fetch(url, { headers, method: 'GET' })
-        if (!response.ok) throw new Error(`${response.status} ${response.url}`)
+        if (!response.ok) {
+            throw new Error(`${response.status} ${response.url}`)
+        }
         const data = await response.json()
         const imageUrl = data.data[0].profile_image_url
         res.json({ imageUrl })

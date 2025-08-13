@@ -13,7 +13,9 @@ router.get('/auth', async (_req, res) => {
 
     try {
         const response = await fetch(url, { method: 'POST' })
-        if (!response.ok) throw new Error(`${response.status}`)
+        if (!response.ok) {
+            throw new Error(`${response.status}`)
+        }
         const data = await response.json()
         res.json(data)
     } catch (error) {
